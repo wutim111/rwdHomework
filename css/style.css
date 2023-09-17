@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.warp{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+/************************header**********************/
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header h1{
+    width: 244px;
+    height: 50px;
+    background: url(../images/logo.png);
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.menu {
+    display: flex;
+}
+.menu  li a{
+    padding: 15px 20px;
+    color: #00cc98;
+    display: flex;
+    justify-content: center;
+}
+.menu li a:hover{
+    border-bottom: 3px solid #00cc98 ;
+}
+.menu_ask{
+    position: relative;
+    width: 120px;
+}
+.menu_ask ul {
+    display: none;
+    position: absolute;
+    top: 55px;
+    z-index: 5;
+}
+.menu_ask ul li {
+    background: #004466;
+    text-align: center;
+}
+
+.course {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+.course_item{
+    border: 1px black solid;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 10px 0 0 0;
+    box-shadow: 1px 1px 3px #000;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.course_item img{
+    padding: 30px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+.course_item h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.course_item ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: disc;
+    padding: 0 20px;
+}
+
+@media (max-width:767px){
+    
+    .header{
+        flex-wrap: wrap;
+    }
+    .logo{
+        margin: 0 auto;
+    }
+    .menu{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .menu li{
+        width: 50%;
+    }
+    .menu_ask ul li a{
+        padding: 0;
+    }
+
+    .context{
+        display: flex;
+        justify-content: center;
+    }
+    .course{
+        flex-direction: column;
+    }
+}
